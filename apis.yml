@@ -1,8 +1,27 @@
 aid: instil
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/instil.png
 name: Instil
-description: 'Instil is a company surfaced as a portfolio company of threshold-ventures and added to the
-  API Evangelist network as a stub for enrichment. Sector: saas. This profile is a lead awaiting the enrichment
-  pipeline.'
+description: 'Instil is a purpose-built fundraising CRM and revenue-intelligence platform
+  for nonprofit organizations, built for major-gifts and development teams. It manages
+  the full donor lifecycle across major gifts, capital campaigns, planned giving,
+  grant tracking, and moves management, and layers AI on top with One-Click Briefings
+  that assemble a constituent''s giving history and contact record on demand and Voice
+  AI Logging that transcribes calls and writes interactions back to Instil or Salesforce.
+  Instil connects to the nonprofit tech stack through Salesforce, Stripe, Classy,
+  Mailchimp, Constant Contact, Eventbrite, Google, Outlook, and Zapier. It is backed
+  by Threshold Ventures. No public developer API, documentation, or SDKs are published
+  at this time; integrations are delivered through packaged connectors and Zapier.'
 url: https://raw.githubusercontent.com/api-evangelist/instil/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,10 +31,16 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Saas
+- Nonprofit
+- CRM
+- Fundraising
+- Donor Management
+- Philanthropy
+- Revenue Intelligence
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -23,5 +48,22 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/instil-domain-security.yml
 - type: Website
   url: https://www.instil.io/
+- type: Blog
+  url: https://blog.instil.io/
+- type: PrivacyPolicy
+  url: https://www.instil.io/privacy
+- type: TermsOfService
+  url: https://www.instil.io/terms-conditions
+- type: SignUp
+  url: https://www.instil.io/get-demo-crm
+- type: Login
+  url: https://app.instil.io/
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
