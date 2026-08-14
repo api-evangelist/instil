@@ -31,7 +31,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-14'
 tags:
 - Company
 - Saas
@@ -62,8 +62,49 @@ common:
   url: https://www.instil.io/get-demo-crm
 - type: Login
   url: https://app.instil.io/
+- type: About
+  url: https://www.instil.io/about-us
+- type: BlogFeeds
+  url: https://blog.instil.io/rss.xml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/weareinstil/
+- type: Twitter
+  url: https://twitter.com/weareinstil
+- type: Facebook
+  url: https://www.facebook.com/weareinstil
+- type: LLMsTxt
+  url: llms/instil-llms.txt
+- type: Packages
+  url: packages/instil-packages.yml
+- type: Plans
+  url: plans/instil-plans-pricing.yml
+- type: Lifecycle
+  url: lifecycle/instil-lifecycle.yml
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-14'
+  status: minimal
+  artifacts_added: 5
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Instil ships only an end-user nonprofit CRM: www.instil.io has no /developers, /api,
+    /integrations or /pricing page and no such URL in its sitemap, and the one API host it
+    operates, api.instil.io, is the private AWS API Gateway backend for app.instil.io that
+    answers 404 {"message":"Not Found"} on every OpenAPI, GraphQL, MCP and .well-known
+    discovery path.
+  evidence:
+  - url: https://api.instil.io/openapi.json
+    status: 404
+  - url: https://api.instil.io/graphql
+    status: 404
+  - url: https://www.instil.io/developers
+    status: 404
+  - url: https://www.instil.io/pricing
+    status: 404
+  - url: https://www.instil.io/.well-known/agent-card.json
+    status: 404
+  - url: https://docs.instil.io/
+    status: 0
+  checked: '2026-08-14'
