@@ -1,0 +1,46 @@
+generated: '2026-08-14'
+method: searched
+source: >-
+  npm registry search (registry.npmjs.org/-/v1/search?text=instil), PyPI
+  (pypi.org/pypi/instil/json -> 404), GitHub org lookup (api.github.com/orgs/instil-io ->
+  404), and the Instil website/blog, which publish no SDK or developer page.
+package_count: 0
+packages: []
+note: >-
+  Instil (instil.io) publishes no first-party client library in any registry. No SDKs
+  pointer is wired in apis.yml, and none should be added on a later round.
+rejected_candidates:
+- name: '@instil/figma-sync'
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: >-
+    OWNERSHIP MISS. The npm @instil scope belongs to Instil Software Ltd (instil.co), a
+    Belfast software consultancy, not to Instil the nonprofit fundraising CRM
+    (instil.io). Same word, different company.
+- name: '@instil/cdk-to-scp'
+  registry: npm
+  version: null
+  published: null
+  official: false
+  reason: >-
+    OWNERSHIP MISS. Same @instil npm scope as above — Instil Software Ltd (instil.co),
+    an AWS CDK tool, unrelated to instil.io.
+- name: github.com/instil
+  registry: github
+  version: null
+  published: null
+  official: false
+  reason: >-
+    OWNERSHIP MISS. The GitHub org "instil" resolves with blog http://instil.co — again
+    Instil Software Ltd, not instil.io. api.github.com/orgs/instil-io returns 404, so
+    Instil the CRM has no public GitHub organization.
+- name: instill-education (Postman workspace)
+  registry: postman
+  version: null
+  published: null
+  official: false
+  reason: >-
+    OWNERSHIP MISS. The only Postman workspace matching the search is "instill-education",
+    a different company; Instil publishes no public Postman workspace or collection.

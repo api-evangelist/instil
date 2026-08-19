@@ -1,0 +1,64 @@
+generated: '2026-08-14'
+method: probed
+source: live GET of /.well-known/* on every Instil host reachable from apis.yml
+note: >-
+  Every probed path returned 404 on every host. No WellKnown or SecurityTxt pointer is
+  wired in apis.yml, because a recorded absence is not a served surface. www.instil.io
+  (Webflow) answers a fixed "Invalid .well-known request" HTML stub for any path under
+  /.well-known/, app.instil.io (Next.js) answers its SPA 404 shell, and api.instil.io
+  answers the AWS API Gateway JSON body {"message":"Not Found"} — none of those is a
+  document.
+hosts:
+- host: www.instil.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html, file: null}
+  - {path: /llms.txt, status: 404, content_type: text/html, file: null}
+  - {path: /robots.txt, status: 200, content_type: text/plain, file: null}
+  - {path: /sitemap.xml, status: 200, content_type: application/rss+xml, file: null}
+- host: app.instil.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html, file: null}
+  - {path: /llms.txt, status: 404, content_type: text/html, file: null}
+- host: api.instil.io
+  note: >-
+    Real host, and the only API-shaped one Instil operates. It is an AWS API Gateway
+    front door for the app.instil.io product; every path answers 404 with the API
+    Gateway JSON body and no route is documented publicly.
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/api-catalog, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: application/json, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: application/json, file: null}
+  - {path: /llms.txt, status: 404, content_type: application/json, file: null}
+- host: blog.instil.io
+  documents:
+  - {path: /.well-known/security.txt, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, content_type: text/html, file: null}
+  - {path: /.well-known/agent.json, status: 404, content_type: text/html, file: null}
+  - {path: /llms.txt, status: 404, content_type: text/html, file: null}
+  - {path: /robots.txt, status: 200, content_type: text/plain, file: null}
+  - {path: /sitemap.xml, status: 200, content_type: application/xml, file: null}
+hosts_not_resolving:
+- docs.instil.io
+- developer.instil.io
+- developers.instil.io
+- help.instil.io
+- support.instil.io
+- status.instil.io
+- trust.instil.io
+- security.instil.io

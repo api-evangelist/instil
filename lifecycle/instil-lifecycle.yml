@@ -1,0 +1,27 @@
+generated: '2026-08-14'
+method: probed
+source: >-
+  Probes of www.instil.io, blog.instil.io and instil.statuspage.io, plus the full
+  www.instil.io and blog.instil.io sitemaps.
+versioning: null
+deprecation: null
+sla: null
+status_page: null
+deprecated_operations: []
+note: >-
+  Instil publishes no versioning policy, no deprecation policy, no SLA and no status page.
+  status.instil.io does not resolve; neither sitemap contains a changelog, release-notes
+  or status URL. No StatusPage and no Deprecation pointer is wired in apis.yml.
+unverified_candidates:
+- url: https://instil.statuspage.io/
+  status: 200
+  claim: status page
+  accepted: false
+  reason: >-
+    OWNERSHIP UNPROVEN + ABANDONED. The page is titled "Instil Status" but nothing on any
+    instil.io property links to it, and its own API
+    (https://instil.statuspage.io/api/v2/summary.json) shows an unconfigured Statuspage:
+    two default components, one literally named "Management Portal (example)", page
+    updated_at 2021-01-18, zero incidents ever. It cannot be tied to instil.io rather than
+    to another company named Instil, and even if it were theirs it documents nothing, so
+    it is recorded here instead of being credited as a status page.
