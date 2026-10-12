@@ -1,0 +1,16 @@
+generated: '2026-10-12'
+method: none
+source:
+- https://zapier.com/apps/instil/integrations
+- https://n8n.io/integrations/instil/
+- https://composio.dev/toolkits/instil
+- https://monid.ai/tools/instil
+checked:
+- https://composio.dev/toolkits/instil
+- https://monid.ai/tools/instil
+- https://n8n.io/integrations/instil/
+- https://zapier.com/apps/instil/integrations
+summary: null
+marketplace_apps: []
+edges: []
+templates: []
